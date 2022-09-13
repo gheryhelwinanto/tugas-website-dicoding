@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Poppins:wght@500&family=Roboto+Mono:wght@700&display=swap');
+
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*navy: #1c3879
+blue: #607eaa
+beige: #eae3d2
+winter: #f9f5eB
+*/
+
+body {
+    font-family: sans-serif;
+    height: auto;
+}
+
+header {
+    display: inline;
+}
+
+header .nav-head {
+    background: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+header .nav-head > h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #607eaa;
+}
+
+header .nav-head > p {
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+    color: #1c3879;
+}
+
+header .nav-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0rem 0.03rem 0.4rem 0.03rem #607eaa52;
+    z-index: 99;
+}
+
+header .nav-container .menu .menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50%;
+    width: 100%;
+    margin-left: 2rem;
+}
+
+header .nav-container .menu .menu-container .menu-list, li{
+    list-style: none;
+}
+
+.menu-container .menu-list {
+    flex-grow: 1;
+    position: relative;
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    font-weight: 600;
+}
+
+header .nav-container .menu .menu-container .menu-list:hover {
+    cursor: pointer;
+}
+
+header .nav-container .menu .menu-container .menu-list > .ml-button, a {
+    color: #1c3879;
+    text-decoration: none;
+    font-size: 1,25rem;
+}
+
+header .nav-container .menu .menu-container .menu-list > a:hover , .ml-content .ml-container li a:hover{
+    color: #eae3d2;
+}
+
+header .nav-container .menu .menu-container .menu-list .ml-content {
+    position: absolute;
+    display: none;
+}
+
+header .nav-container .menu .menu-container .menu-list:hover > .ml-content {
+    display: block;
+    position: absolute;
+    margin-top: 0.6rem;
+    margin-left: -1rem;
+    width: 11rem;
+    height: auto;
+}
+
+header .nav-container .menu .menu-container .menu-list:hover > .ml-content > .ml-container li {
+    display: block;
+    padding: 1rem;
+    background: white;
+    border-bottom: 0.059rem dotted rgba(129, 149, 161, 0.6);
+}
+
+header .nav-container .menu .menu-container .menu-list:hover > .ml-content > .ml-container li:last-child {
+    border-bottom: none;
+}
+
+
+main {
+    width: 74%;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .content-container {
+    padding: 1rem;
+    display: inline;
+}
+
+main .content-container .content-title h1 {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    color: #1c3879;
+    padding: 1rem;
+}
+
+main .content-container .content-breadcrumbs ul {
+    padding: 0.5rem 0.5rem 0.5rem 1.3rem;
+    background: #f9f5eB;
+}
+
+main .content-container .content-breadcrumbs ul li {
+    display: inline-block;
+}
+
+main .content-container .content-breadcrumbs ul li::before {
+    content: "/";
+    color: #1c3879;
+    margin: 0 0.75rem;
+}
+
+main .content-container .content-breadcrumbs ul li:first-child::before {
+    content: none;
+}
+
+main .content-container .content-article {
+    display: block;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .content-container .content-article .content-article-picture {
+    text-align: center;
+    overflow: hidden;
+}
+
+main .content-container .content-article .content-article-picture img{
+    background: #607eaa;
+    max-height: auto;
+    max-width: 68vw;
+    width: 100%;
+}
+
+main .content-container .content-article .content-article-picture figcaption{
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #1c3879;
+}
+
+main .content-container .content-article .ca-verso {
+    display: flex;
+    flex-direction: column;
+}
+
+main .content-container .content-article .ca-verso h2 {
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    text-indent: 1rem;
+}
+
+main .content-container .content-article .ca-verso .book-id {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem ;
+    font-size: 1.05rem;
+    background: #f9f5eB;
+    color: #1c3879;
+    border-top-right-radius: 2.5rem;
+}
+
+main .content-container .content-article .ca-verso .book-id .cav-content li::before {
+    content: ": ";
+}
+
+main .content-container .content-article .content-article-blurb h2 {
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    text-indent: 1rem;
+}
+
+main .content-container .content-article .content-article-blurb .cab-content {
+    font-size: 1.05rem;
+    background: #f9f5eB;
+    border-top-right-radius: 2.5rem;
+    color: #1c3879;
+    padding: 1rem;
+    text-align: center;
+}
+
+main .content-container .content-article .content-article-blurb .cab-content .book-quote {
+    background: #607eaa;
+    padding: 0.25rem;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+
+
+main .content-container .content-article .content-article-blurb .cab-content .book-quote q {
+    color: #f9f5eB;
+}
+
+main .content-container .content-article .content-article-mc h2 {
+    color: black;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0.5rem;
+    text-indent: 1rem;
+}
+
+main .content-container .content-article .content-article-mc .cam-mc-text {
+    font-size: 1.05rem;
+    padding: 1rem;
+}
+
+main .content-container .content-article .content-article-mc .cam-mc-text p {
+    text-align: justify;
+    text-indent: 1rem;
+}
+
+
+main .content-container .content-article .content-article-mc .cam-mc-text p span {
+    font-size: 2rem;
+}
+
+
+main .content-container .content-recommendation {
+    display: inline;
+}
+
+main .content-container .content-recommendation .suggest {
+    text-align: center;
+    cursor: pointer;
+}
+
+main .content-container .content-recommendation .suggest h3 {
+    font-weight: 300;
+}
+
+main .content-recommendation .cr-slide-container {
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.content-recommendation .cr-slide-container img {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+main .content-recommendation .dotsircle {
+    max-width: 8rem;
+    width: 100%;
+    height: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+main .content-recommendation .dotsircle .dot {
+    background-color: #1c3879;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    transition: background-color 1.4s ease;
+}
+
+main .content-recommendation .dotsircle > .active {
+    background-color: #607eaa;
+}
+
+main .content-recommendation .cr-slide-container > .fade {
+    animation-name: fading;
+    animation-duration: 1500ms;
+}
+
+@keyframes fading {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/*Bagian Aside*/
+aside {
+    display: block;
+    width: 26%;
+    float: right;
+    padding: 3px;
+    margin: 2.65rem 0;
+    position: sticky;
+    top: 4rem;
+    left: 0;
+    overflow: hidden;
+}
+
+aside .bio-container {
+    display: inline-block;
+}
+
+aside .bio-container ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-height: 38rem;
+    height: auto;
+    overflow: hidden;
+}
+
+aside .bio-container ul li {
+    margin: 1rem auto;
+}
+
+aside .bio-container ul li p {
+    text-align: center;
+}
+
+aside .bio-container ul .photo-profile {
+    padding: 10px;
+    width: 12.5rem;
+    flex-grow: 3;
+    overflow: hidden;
+}
+
+aside .bio-container ul .photo-profile img {
+    max-width: 11.5rem;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+aside .bio-container ul .name-profile {
+    flex-grow: 1;
+}
+
+aside .bio-container ul .status-profile {
+    flex-grow: 1;
+    text-align: center;
+}
+
+aside .bio-container ul .bio-profile {
+    flex-grow: 2;
+}
+
+aside .bio-container ul .email {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.aside-clear {
+    clear: both;
+}
+
+footer {
+    margin-top: auto;
+    background: #607eaa;
+    height: auto;
+    width: 100%;
+    padding: 1.05rem;
+}
+
+footer p {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+
+/*For mobile phones*/
+@media only screen and (max-width: 414px){
+    body {
+        width: 100%;
+        height: auto;
+    }
+    header {
+        width: 100%;
+        display:inline;
+    }
+    
+    header .nav-head {
+        width: 100%;
+    }
+
+    header .nav-container {
+        width: 100%;
+        height: 1rem;
+    }
+
+    header .nav-container .menu {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        background: #1c3879;
+        color: white;
+        padding: 0.5rem 0;
+    }
+
+    header .nav-container .menu::before {
+        content: "Menu";
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+
+    header .nav-container .menu:hover > .menu-container {
+        height: 11rem;
+        margin-top: 0.5rem;
+        background: white;
+        width: 100%;
+    }
+
+    header .nav-container .menu .menu-container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        width: 100%;
+        height: 0px;
+        transition: height 800ms;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    header .nav-container .menu:hover .menu-container .menu-list {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    header .nav-container .menu:hover .menu-container .menu-list:hover {
+        background: #607eaa;
+    }
+
+    header .nav-container .menu:hover .menu-container .menu-list:hover .ml-button, header .nav-container .menu:hover .menu-container .menu-list:hover a  {
+        color: white;
+    }
+
+    header .nav-container .menu:hover .menu-container .menu-list:hover > .ml-content {
+        display: none;
+    }
+
+
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main .content-container {
+        padding: 0.5rem;
+    }
+
+    main .content-container .content-title h1 {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+
+    main .content-container .content-breadcrumbs ul {
+        padding: 0.25rem 0.25rem 0.25rem 0.65rem;
+        background: #f9f5eB;
+    }
+    
+    main .content-container .content-breadcrumbs ul li::before {
+        content: "/";
+        color: #1c3879;
+        margin: 0 0.1rem;
+    }
+
+    main .content-container .content-article {
+        padding: 0.5rem;
+    }
+
+    main .content-container .content-article .content-article-picture img {
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }    
+
+    main .content-container .content-article .content-article-picture figcaption {
+        display: none;
+    }
+
+    main .content-container .content-article .ca-verso h2 {
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        text-indent: 0.5rem;
+    }
+
+    main .content-container .content-article .ca-verso .book-id {
+        padding: 0.25rem ;
+        font-size: 0.85rem;
+        border-top-right-radius: 1.25rem;
+    }
+    
+    main .content-container .content-article .content-article-blurb h2 {
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        text-indent: 0.5rem;
+    }
+
+    main .content-container .content-article .content-article-blurb .cab-content {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        border-top-right-radius: 1.25rem;
+    }
+
+    main .content-container .content-article .content-article-blurb .cab-content q {
+        background: none;
+        color: #1c3879;
+        line-height: 1rem;
+    }    
+    
+    main .content-container .content-article .content-article-mc h2 {
+        font-size: 1.5rem;
+        padding: 0.25rem;
+        text-indent: 0.5rem;
+    }
+
+    main .content-container .content-article .content-article-mc .cam-mc-text {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    main .content-container .content-article .content-article-mc .cam-mc-text p {
+        text-align: left;
+        text-indent: 0.5rem;
+    }
+    
+    main .content-container .content-article .content-article-mc .cam-mc-text p span {
+        font-size: inherit;
+    }
+
+    main .content-container .content-recommendation .suggest h3 {
+        font-weight: normal;
+        font-size: 0.85rem;
+    }
+
+    main .content-recommendation .cr-slide-container {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        height: 15rem;
+    }
+
+    aside {
+        display: inline-block;
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    aside .bio-container {
+        border-left: none;
+    }
+
+    aside .bio-container ul {
+        padding: 0px;
+        height: auto;
+        overflow: hidden;
+    }
+
+    aside .bio-container ul .photo-profile {
+        height: auto;
+    }
+
+    aside .bio-container ul .photo-profile img{
+        margin: 0 auto;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+    
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+
+/*For tablets*/
+@media only screen and (max-width: 912px){
+    body {
+        height: auto;
+    }
+    
+    header .nav-container .menu .menu-container {
+        max-width: 100%;
+        width: 90%;
+    }
+    
+    header .nav-container .menu .menu-container .menu-list {
+        text-align: center;
+    }
+
+    header .nav-container .menu .menu-container .menu-list > .ml-button, header .nav-container .menu .menu-container .menu-list > a {
+        color: #1c3879;
+    }
+
+    header .nav-container .menu .menu-container .menu-list:hover > .ml-content {
+        padding: 0.5rem;
+        margin-top: 0.2rem;
+        margin-left: auto;
+    }
+
+    header .nav-container .menu .menu-container .menu-list:hover > .ml-content > .ml-container li:hover {
+        background: #607eaa;
+    }
+
+    header .nav-container .menu .menu-container .menu-list:hover > .ml-content > .ml-container li:hover a {
+        color: white;
+    }
+    
+    
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    main .content-recommendation .cr-slide-container {
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 40vh;
+    }
+
+    aside {
+        display: inline-block;
+        margin: 0 auto;
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    aside .bio-container {
+        border-left: none;
+        width: inherit;
+    }
+
+    aside .bio-container ul {
+        width: 100%;
+        max-height: 30rem;
+        height: auto;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    aside .bio-container ul li p{
+        text-align: center;
+    }
+
+    aside .bio-container ul .photo-profile{
+        height: auto;
+    }
+
+    aside .bio-container .bio-flex-container .photo-profile > img{
+        width: 10.5rem; 
+        text-align: center; 
+        border-radius: 50%; 
+        margin: 0 auto;
+    }
+    
+    aside .bio-container ul .name-profile, .status-profile, .bio-profile, .email {
+        flex-grow: 1;
+    }
+}
